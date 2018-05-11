@@ -1,0 +1,32 @@
+.item-book{
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    display: flex;
+}
+.item-book .item-icon{
+   margin: 10px;
+}
+.item-book .icon{
+    width: 80px;
+    height: 120px;
+}
+.item-book .item-text{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+}
+.item-book .tag{
+    display: inline-block;
+    background-color:orange;
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+.item-book .title,item-book .tags,.item-book .authors{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

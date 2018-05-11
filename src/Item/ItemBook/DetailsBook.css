@@ -1,0 +1,75 @@
+.details-book{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+.details-book .top-bar{
+    background-color: dodgerblue;
+    height: 55px;
+    line-height: 55px;
+    color: white;
+}
+.details-book .top-title{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%) ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.details-book .back{
+    float: left;
+    margin-left: 20px;
+    font-style: normal;
+    color: white;
+}
+.details-book .back::before{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    content: '';
+    margin-right: 2px;
+    transform: rotate(45deg);
+}
+.details-book .intro-bar{
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+.details-book .intro-bar .intro-icon{
+    margin: 10px;
+}
+.details-book .intro-bar .icon{
+    width: 90px;
+    height: 130px;
+}
+.details-book .intro-text{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+}
+.details-book .intro-text .tag{
+    background-color:orange;
+    color: white;
+    margin-right: 5px;
+}
+.intro-text .title,.intro-text .tags,.intro-text .authors{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.details-book .mark{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.details-book .mark-text{
+    margin: 10px;
+    text-indent: 20px;
+}
