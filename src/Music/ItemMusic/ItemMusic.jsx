@@ -12,14 +12,15 @@ class ItemMusic extends Component{
         }
     }
     render(){
-        document.querySelector('.tab-container').style.visibility='visible'
-        document.querySelector('.list').style.display = 'inline'
+        if(document.querySelector('.tab-container')  ) {
+            document.querySelector('.tab-container').style.visibility = 'visible'
+        }
         let data = this.props.data
         let oldUrl = data.image
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
         let authors = data.author ? data.author : ['bigbang']
         let path = {
-            pathname:'/details',
+            pathname:'/details/music',
             state:data,
         }
         return(

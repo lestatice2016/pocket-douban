@@ -5,16 +5,17 @@ import './DetailsMusic.css'
 class DetailsMusic extends Component{
     render(){
         //将其他组件设为不可见
-        document.querySelector('.tab-container').style.visibility='hidden'
-        document.querySelector('.list').style.display = 'none'
+        if(document.querySelector('.tab-container') ) {
+            document.querySelector('.tab-container').style.visibility='hidden'
+        }
         let item =this.props.location.state
         let oldUrl = item.image
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
-        let authors = item.author ? item.author : ['bigbang']
+        let authors = item.author ? item.author : ['五月天']
         return(
             <div className="details-music">
                 <div className="top-bar">
-                    <Link to='/'><i className="back">音乐</i></Link>
+                    <Link to='/musics'><i className="back">音乐</i></Link>
                     <span className="top-title">{item.title}</span>
                 </div>
                 <div className="intro-bar">

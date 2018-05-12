@@ -3,17 +3,17 @@ import './ItemMovie.css'
 import {Link} from 'react-router-dom'
 
 class ItemMovie extends Component{
-
     render(){
-        if(document.querySelector('.tab-container') && document.querySelector('.list') ){
+        if(document.querySelector('.tab-container') ){
             document.querySelector('.tab-container').style.visibility='visible'
-            document.querySelector('.list').style.display = 'inline'
         }
         let data = this.props.data
+        let mark = this.props.mark
+        data.markMovie = mark
         let oldUrl = data.images.medium
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
         let path = {
-            pathname:'/details',
+            pathname:'/details/movie',
             state:data,
         }
         return(

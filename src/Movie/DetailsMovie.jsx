@@ -5,15 +5,18 @@ import './DetailsMovie.css'
 class DetailsMovie extends Component{
     render(){
         //将其他组件设为不可见
-        document.querySelector('.tab-container').style.visibility='hidden'
-        document.querySelector('.list').style.display = 'none'
+        if(document.querySelector('.tab-container') ) {
+            document.querySelector('.tab-container').style.visibility='hidden'
+        }
         let item =this.props.location.state
         let oldUrl = item.images.medium
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
+        let mark = item.markMovie
         return(
             <div className="details-movie">
                 <div className="top-bar">
-                    <Link to='/'><i className="back">电影</i></Link>
+                    <Link to={mark == 0 ? '/' : '/movies'}>
+                    <i className="back">电影</i></Link>
                     <span className="top-title">{item.title}</span>
                 </div>
                 <div className="item-icon">

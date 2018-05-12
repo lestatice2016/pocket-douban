@@ -6,14 +6,15 @@ class ItemBook extends Component{
 
     render(){
         //点击返回键后,将其他组件设为默认可见值
-        document.querySelector('.tab-container').style.visibility='visible'
-        document.querySelector('.list').style.display = 'inline'
+        if(document.querySelector('.tab-container')) {
+            document.querySelector('.tab-container').style.visibility = 'visible'
+        }
         let data = this.props.data;
         let oldUrl = data.image;
         //将图片缓存,不然就无法获取图片,出现403
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
         let path = {
-            pathname:'/details',
+            pathname:'/details/book',
             state:data,
         }
         return(

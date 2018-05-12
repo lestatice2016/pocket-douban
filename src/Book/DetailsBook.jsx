@@ -3,18 +3,18 @@ import {Link} from 'react-router-dom'
 import './DetailsBook.css'
 
 class DetailsBook extends Component{
-
     render(){
         //将其他组件设为不可见
-        document.querySelector('.tab-container').style.visibility='hidden'
-        document.querySelector('.list').style.display = 'none'
+        if(document.querySelector('.tab-container') ) {
+            document.querySelector('.tab-container').style.visibility='hidden'
+        }
         let item =this.props.location.state
         let oldUrl = item.image
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
         return(
             <div className="details-book">
                 <div className="top-bar">
-                    <Link to='/'><i className="back">图书</i></Link>
+                    <Link to='/books'><i className="back">图书</i></Link>
                     <span className="top-title">{item.title}</span>
                 </div>
                 <div className="intro-bar">

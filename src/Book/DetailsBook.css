@@ -1,31 +1,34 @@
-.details-music{
+.details-book{
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 0;
     right: 0;
     background-color: white;
 }
-.details-music .top-bar{
+.details-book .top-bar{
     background-color: dodgerblue;
     height: 55px;
     line-height: 55px;
     color: white;
 }
-.details-music .top-title{
+.details-book .top-title{
     position: absolute;
     left:50%;
     transform:translateX(-50%) ;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 160px;
+    display: inline-block;
+    text-align: center;
 }
-.details-music .back{
+.details-book .back{
     float: left;
     margin-left: 20px;
     font-style: normal;
     color: white;
 }
-.details-music .back::before{
+.details-book .back::before{
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -35,44 +38,41 @@
     margin-right: 2px;
     transform: rotate(45deg);
 }
-.details-music .intro-bar{
+.details-book .intro-bar{
     margin: 10px;
     border-bottom: 1px solid #ccc;
     display: flex;
 }
-.details-music .intro-bar .intro-icon{
+.details-book .intro-bar .intro-icon{
     margin: 10px;
 }
-.details-music .intro-bar .icon{
+.details-book .intro-bar .icon{
     width: 90px;
     height: 130px;
 }
-.details-music .intro-text{
+.details-book .intro-text{
     margin: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 250px;
 }
-.details-music .intro-text .tag{
+.details-book .intro-text .tag{
     background-color:orange;
     color: white;
     margin-right: 5px;
 }
-.details-music .title,.details-music .tags,.details-music .authors{
+.intro-text .title,.intro-text .tags,.intro-text .authors{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.details-music .author{
-    margin-right: 5px;
-}
-.details-music .mark{
+.details-book .mark{
     margin: 10px;
     font-size: 20px;
     font-weight: 700;
 }
-.details-music .mark-text{
+.details-book .mark-text{
     margin: 10px;
     text-indent: 20px;
 }

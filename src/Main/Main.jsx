@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import {Route} from 'react-router-dom'
-import ItemBook from '../Item/ItemBook/ItemBook'
-import ItemMovie from '../Item/ItemMovie/ItemMovie'
-import ItemMusic from '../Item/ItemMusic/ItemMusic'
-import DetailsBook from '../Item/ItemBook/DetailsBook'
-import DetailsMovie from '../Item/ItemMovie/DetailsMovie'
-import DetailsMusic from '../Item/ItemMusic/DetailsMusic'
+import ItemBook from '../Book/ItemBook/ItemBook'
+import ItemMovie from '../Movie/ItemMovie/ItemMovie'
+import ItemMusic from '../Music/ItemMusic/ItemMusic'
 import './Main.css'
 
 class Main extends Component{
@@ -16,16 +12,15 @@ class Main extends Component{
         switch (id){
             case 0 :return(
                 <main className="main">
-                    <ul className="list">
+                    <ul className="list" >
                         {
                             datas.subjects.map((item,index) => {
                                 return(
-                                    <ItemMovie key={index} data={item} />
+                                    <ItemMovie key={index} data={item} mark="0" />
                                 )
                             })
                         }
                     </ul>
-                    <Route path="/details" component={DetailsMovie} />
                 </main>
             )
             break
@@ -40,7 +35,6 @@ class Main extends Component{
                             })
                         }
                     </ul>
-                    <Route path="/details" component={DetailsBook} />
                 </main>
             )
             break
@@ -50,12 +44,11 @@ class Main extends Component{
                         {
                               datas.movies.map((item,index) => {
                                  return(
-                                     <ItemMovie key={index} data={item} />
+                                     <ItemMovie key={index} data={item} mark="2" />
                                  )
                               })
                         }
                     </ul>
-                    <Route path="/details" component={DetailsMovie} />
                 </main>
             )
             break
@@ -70,7 +63,6 @@ class Main extends Component{
                               })
                         }
                     </ul>
-                    <Route path="/details" component={DetailsMusic} />
                 </main>
             )
             break
