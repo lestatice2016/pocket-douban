@@ -7,6 +7,8 @@ class ItemMovie extends Component{
         if(document.querySelector('.tab-container') ){
             document.querySelector('.tab-container').style.visibility='visible'
         }
+        if (document.querySelector('.main'))
+                document.querySelector('.main').scrollTop = 0
         let data = this.props.data
         let mark = this.props.mark
         data.markMovie = mark

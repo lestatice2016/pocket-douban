@@ -4,6 +4,8 @@
     left: 0;
     right: 0;
     background-color: white;
+    height: 100vh;
+    overflow: scroll;
 }
 .details-book .top-bar{
     background-color: dodgerblue;

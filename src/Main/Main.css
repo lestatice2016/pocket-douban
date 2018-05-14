@@ -1,6 +1,5 @@
 .main{
+    height: 100vh;
+    overflow: scroll;
+}
 
-}
-.list{
-   /*height: 400px;*/
-}

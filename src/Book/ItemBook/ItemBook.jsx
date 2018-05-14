@@ -9,6 +9,8 @@ class ItemBook extends Component{
         if(document.querySelector('.tab-container')) {
             document.querySelector('.tab-container').style.visibility = 'visible'
         }
+        if (document.querySelector('.main'))
+            document.querySelector('.main').scrollTop = 0
         let data = this.props.data;
         let oldUrl = data.image;
         //将图片缓存,不然就无法获取图片,出现403

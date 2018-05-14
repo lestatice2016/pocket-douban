@@ -15,10 +15,12 @@ class ItemMusic extends Component{
         if(document.querySelector('.tab-container')  ) {
             document.querySelector('.tab-container').style.visibility = 'visible'
         }
+        if (document.querySelector('.main'))
+            document.querySelector('.main').scrollTop = 0
         let data = this.props.data
         let oldUrl = data.image
         let newUrl = 'https://images.weserv.nl/?url='+ oldUrl.substring(7)
-        let authors = data.author ? data.author : ['bigbang']
+        let authors = data.author ? data.author : ['五月天']
         let path = {
             pathname:'/details/music',
             state:data,

@@ -1,4 +1,7 @@
 .App {
- position: relative;
+    position: relative;
+    /*禁止滑动*/
+    height: 100vh;
+    overflow: hidden;
 }
 
